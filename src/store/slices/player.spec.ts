@@ -4,6 +4,7 @@ import { play, next, PlayerState, player as reducer } from './player'
 const initialState: PlayerState = {
   currentModuleIndex: 0,
   currentLessonIndex: 0,
+  isLoading: false,
   course: {
     id: 1,
     modules: [

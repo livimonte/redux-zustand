@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react'
+import { Loader, MessageCircle } from 'lucide-react'
 import { Header } from '../components/Header'
 import { Video } from '../components/Video'
 import { Module } from '../components/Module'
@@ -10,6 +10,7 @@ import { loadCourse } from '../store/slices/player'
 export function Player() {
   const dispatch = useAppDispatch()
   const modules = useAppSelector((state) => state.player.course?.modules)
+  const isCourseLoading = useAppSelector((state) => state.player.isLoading)
 
   const { currentLesson } = useCurrentLesson()
 
@@ -40,7 +41,12 @@ export function Player() {
             <Video />
           </div>
           <aside className="w-80 absolute top-0 bottom-0 right-0 border-l divide-y-2 divide-zinc-900 border-zinc-800 bg-zinc-900 overflow-y-scroll scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
-            {modules &&
+            {isCourseLoading ? (
+              <div className="flex h-full items-center justify-center">
+                <Loader className="w-6 h-6 text-zinc-400 animate-spin" />
+              </div>
+            ) : (
+              modules &&
               modules.map((module, index) => {
                 return (
                   <Module
@@ -50,7 +56,8 @@ export function Player() {
                     amountOfLessons={module.lessons.length}
                   />
                 )
-              })}
+              })
+            )}
           </aside>
         </main>
       </div>
