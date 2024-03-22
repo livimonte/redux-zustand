@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-const initialCourseData = {
+export const initialCourseData = {
   currentModuleIndex: 0,
   currentLessonIndex: 0,
   course: {
