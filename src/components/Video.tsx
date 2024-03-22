@@ -1,17 +1,17 @@
 import ReactPlayer from 'react-player'
-import { useDispatch } from 'react-redux'
 import { next } from '../store/slices/player'
 import { useCurrentLesson } from '../store/hooks'
+import { useAppDispatch } from '../store'
 
 export function Video() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const { currentLesson } = useCurrentLesson()
 
   function handlePlayNext() {
     dispatch(next())
   }
 
-   if (!currentLesson) return null;
+  if (!currentLesson) return null
 
   return (
     <div className="w-full bg-zinc-950 aspect-video">
