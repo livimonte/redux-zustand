@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { api } from '../../lib/api.ts'
 
 interface Course {
   id: number
@@ -21,6 +22,7 @@ export interface PlayerState {
 
   play: (moduleAndLessonIndex: [number, number]) => void
   next: () => void
+  load: () => Promise<void>
 }
 
 export const useStore = create<PlayerState>((set, get) => {
@@ -57,6 +59,16 @@ export const useStore = create<PlayerState>((set, get) => {
           })
         }
       }
+    },
+
+    load: async () => {
+      set({ isLoading: true })
+
+      const response = await api.get('/courses/1')
+      set({
+        course: response.data,
+        isLoading: false,
+      })
     },
   }
 })
