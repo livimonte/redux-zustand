@@ -1,7 +1,10 @@
 {
   "name": "react-redux-zustand",
-  "private": true,
-  "version": "0.0.0",
+  "description": "Showing YouTube videos with Redux and Zustand",
+  "keywords": ["React","Redux","Zustand","TypeScript"],
+  "private": false,
+  "license": "MIT",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
