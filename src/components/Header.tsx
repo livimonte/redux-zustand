@@ -1,5 +1,5 @@
-import { useCurrentLesson } from '../zustand/hooks.ts'
-import { useStore } from '../zustand/store'
+import { useCurrentLesson } from '../zustand/hooks'
+import { useStore } from '../zustand/store/store'
 
 export function Header() {
   const { currentModule, currentLesson } = useCurrentLesson()

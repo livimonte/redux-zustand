@@ -3,8 +3,8 @@ import { Header } from '../components/Header'
 import { Video } from '../components/Video'
 import { Module } from '../components/Module'
 import { useEffect } from 'react'
-import { useCurrentLesson } from '../zustand/hooks.ts'
-import { useStore } from '../zustand/store'
+import { useCurrentLesson } from '../zustand/hooks'
+import { useStore } from '../zustand/store/store'
 
 export function Player() {
   const { currentLesson } = useCurrentLesson()
