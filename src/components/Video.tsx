@@ -5,8 +5,13 @@ import { useStore } from '../zustand/store/store'
 
 export function Video() {
   const { currentLesson } = useCurrentLesson()
-  const { isLoading, next } = useStore((store) => {
-    return { isLoading: store.isLoading, next: store.next }
+  const { isLoading, next, isFirstVideo } = useStore((store) => {
+    const isFirstVideo = store.currentModuleIndex === 0 && store.currentLessonIndex === 0
+    return {
+      isLoading: store.isLoading,
+      next: store.next,
+      isFirstVideo,
+    }
   })
 
   function handlePlayNext() {
@@ -24,9 +29,9 @@ export function Video() {
           width="100%"
           height="100%"
           controls
-          playing
+          playing={!isFirstVideo}
           onEnded={handlePlayNext}
-          url={`https://www.youtube.com/watch?v=${currentLesson?.id}`}
+          url={`https://www.youtube.com/watch?v=${currentLesson?.videoId}`}
         />
       )}
     </div>

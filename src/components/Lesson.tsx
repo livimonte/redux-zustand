@@ -13,7 +13,7 @@ export function Lesson({ title, duration, onPlay, isCurrent = false }: LessonPro
       onClick={onPlay}
       data-active={isCurrent}
       disabled={isCurrent}
-      className="data-[active=true]:text-emerald-400 enabled:hover:text-zinc-100 flex items-center gap-3 text-sm text-zinc-400 ">
+      className="data-[active=true]:text-emerald-400 enabled:hover:text-zinc-100 flex items-center gap-3 text-sm text-zinc-400 text-left">
       {isCurrent ? (
         <PlayCircle className="w-4 h-4 text-emerald-400" />
       ) : (

@@ -7,7 +7,8 @@ interface Course {
     id: number
     title: string
     lessons: Array<{
-      id: string
+      id: number
+      videoId: string
       title: string
       duration: string
     }>

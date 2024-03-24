@@ -7,24 +7,24 @@
           "id": 1,
           "title": "Getting Started with Redux",
           "lessons": [
-            { "id": "_shA5Xwe8_4", "title": "Redux in 100 Seconds", "duration": "13:45" },
-            { "id": "93p3LxR9xfM", "title": "Redux X", "duration": "10:05" },
-            { "id": "poQXNp9ItL4", "title": "Redux X2", "duration": "06:33" },
-            { "id": "W_ATsETujaY", "title": "Redux X3", "duration": "09:12" },
-            { "id": "0awA5Uw6SJE", "title": "Redux X4", "duration": "03:23" },
-            { "id": "8KBq2vhwbac", "title": "Redux X5", "duration": "11:34" }
+            { "id": 1, "videoId": "_shA5Xwe8_4", "title": "Redux in 100 Seconds", "duration": "13:45" },
+            { "id": 2, "videoId": "q-If9n-tUyA", "title": "Redux with Duck Pattern", "duration": "11:34" },
+            { "id": 3, "videoId": "93p3LxR9xfM", "title": "Redux Crash Course", "duration": "10:05" },
+            { "id": 4, "videoId": "poQXNp9ItL4", "title": "Learn Redux from Scratch", "duration": "06:33" },
+            { "id": 5, "videoId": "3RcPDnZtBBA", "title": "Mastering Redux", "duration": "09:12" },
+            { "id": 6, "videoId": "0cfHw9gz7H8", "title": "Advanced React and Redux Guide", "duration": "03:23" }
           ]
         },
         {
           "id": 2,
           "title": "Application Structure",
           "lessons": [
-            { "id": "gE48FQXRZ_o", "title": "Redux X6", "duration": "13:45" },
-            { "id": "ZySFOgejw0k", "title": "Redux X7", "duration": "10:05" },
-            { "id": "h5JA3wfuW1k", "title": "Redux X8", "duration": "06:33" },
-            { "id": "6oAU5Kn9SBY", "title": "Redux X9", "duration": "09:12" },
-            { "id": "ZySFOgejw0k", "title": "Redux X10", "duration": "13:45" },
-            { "id": "7cREd9mesMg", "title": "Redux X11", "duration": "10:05" }
+            { "id": 7, "videoId": "3RcPDnZtBBA", "title": "Mastering Redux", "duration": "09:12" },
+            { "id": 8, "videoId": "_shA5Xwe8_4", "title": "Redux in 100 Seconds", "duration": "13:45" },
+            { "id": 9, "videoId": "93p3LxR9xfM", "title": "Redux Crash Course", "duration": "10:05" },
+            { "id": 10, "videoId": "q-If9n-tUyA", "title": "Redux with Duck Pattern", "duration": "11:34" },
+            { "id": 11, "videoId": "0cfHw9gz7H8", "title": "Advanced React and Redux Guide", "duration": "03:23" },
+            { "id": 12, "videoId": "poQXNp9ItL4", "title": "Learn Redux from Scratch", "duration": "06:33" }
           ]
         }
       ]

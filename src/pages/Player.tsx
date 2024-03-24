@@ -27,8 +27,8 @@ export function Player() {
   }, [currentLesson])
 
   return (
-    <div className="h-screen bg-zinc-950 text-zinc-50 flex justify-center items-center">
-      <div className="flex w-[1100px] flex-col gap-6">
+    <div className="h-screen bg-zinc-950 text-zinc-50 flex justify-center items-center min-w-[1000px]">
+      <div className="flex w-[1200px] flex-col gap-6">
         <div className="flex items-center justify-between">
           <Header />
 
@@ -39,10 +39,10 @@ export function Player() {
         </div>
 
         <main className="relative flex overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 shadow pr-80">
-          <div className="flex-1">
+          <div className="flex-1 min-w-96">
             <Video />
           </div>
-          <aside className="w-80 absolute top-0 bottom-0 right-0 border-l divide-y-2 divide-zinc-900 border-zinc-800 bg-zinc-900 overflow-y-scroll scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
+          <aside className="w-1/3 absolute top-0 bottom-0 right-0 border-l divide-y-2 divide-zinc-900 border-zinc-800 bg-zinc-900 overflow-y-scroll scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
             {isLoading ? (
               <div className="flex h-full items-center justify-center">
                 <Loader className="w-6 h-6 text-zinc-400 animate-spin" />
